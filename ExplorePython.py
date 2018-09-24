@@ -254,7 +254,9 @@ print(y)
 # A tuple is a sequence of immutable Python objects. Tuples are sequences, just
 # like lists. The differences between tuples and lists are, the tuples cannot 
 # be changed unlike lists and tuples use parentheses, whereas lists use square 
-# brackets.
+# brackets. Although a tuple's values may not be altered, tuples may be joined 
+# together to create new tuples. Boolean operations may also be performed on 
+# tuples.
 
 # Example of defining a tuple. As said earlier a tuple if defined by using 
 # parentheses, whereas hard brackets are used to define an array.
@@ -264,7 +266,7 @@ print(tup1)
 
 # Example showing the inability to change tuple properties
 print('\nOne may not change tuple properties:')
-print('"tuple" object does not support item assignment')
+print('TypeError: "tuple" object does not support item assignment')
 
 # Example of how tuples may be made of a mix of data inputs
 print('\nTuples can consists of different data types:')
@@ -279,19 +281,46 @@ tup4 = ()
 print('\nTuple may be empty:')
 print(tup4)
 
+# Example of indexing a tuple
+print('\nA tuple may be indexed like a regular array:')
+print('tup3[0,2,4,6] =',tup3[0],',',tup3[2],',',tup3[4],'.')
+
+# Example of tuple concatanation
+print('\nTuple can be joined together into a new tuple:')
+tup5 = tup3 + tup1
+print(tup5)
+
+# Example of deleting a tuple
+print('\nA tuple may be deleted:')
+del(tup5)
+print('NameError: name "tup1" is not defined')
 
 
+# Example of tuple functions, length
+print('\nThe length of a tuple can be found:')
+print(len(tup3))
 
+# Example of repetitive tuple creation
+print('\nA repetitive tuple can be created:')
+tup6 = ('tup',)*8
+print(tup6)
 
+# Example of comparing tuples
+#print('\nTuple may be compared. Is tup2 equal to tup4: ')
+#bool1 = cmp(tup2,tup4)
+#print(bool1)
 
+# Example of getting the max tuple value
+print('\nThe maximum tuple index can be gotten:')
+val = max(tup1)
+print(val)
 
+# Example of getting the min tuple value
+print('\nThe minumum tuple index can be gotten:')
+val = min(tup1)
+print(val)
 
-
-
-
-
-
-
-
-
-
+# Example of creating a tuple from an array
+print('\nCreate a tuple from a list:')
+tup7 = tuple([1,2,3] + [5,6,7])
+print(tup7)
